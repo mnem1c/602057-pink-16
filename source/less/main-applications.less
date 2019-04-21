@@ -1,8 +1,6 @@
-
 .main-applications {
-  background-image: url(../img/iphone-hand-mobile@1x.png);
-  background-repeat: no-repeat;
-  background-position: 0 43% ;
+  background: url(../img/iphone-hand-mobile@1x.png) 0 43% no-repeat,
+            #1d2631 url(../img/bg-back-mobile@1x.jpg) 50% -2.5% / contain no-repeat;
 }
 .main-applications__link {
   display: block;
@@ -40,4 +38,27 @@
   font-size: 14px;
   line-height: 24px;
   text-align: center;
+}
+.page-main__title {
+  display: none;
+}
+@media (min-width: @tablet-width) {
+  .page-main__title {
+    width: 120px;
+    display: block;
+    margin: 0;
+    margin-left: 40px;
+    color: #ffffff;
+  }
+  .main-applications__link {
+    padding-top: 50px;
+    padding-left: 10px;
+    text-align: left;
+  }
+  .main-applications__list {
+    margin-left: 10px;
+  }
+  .main-applications__description {
+    margin-left: 20px;
+  }
 }
