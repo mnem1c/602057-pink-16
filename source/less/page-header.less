@@ -1,13 +1,21 @@
 .page-header {
+  position: relative;
   min-width: 320px;
+  width: 100%;
+  z-index: 3;
   padding: 0;
   margin: 0 auto;
+  background-color: rgba(29, 38, 49, 0.3);
+
+  }
+.page-header .main-nav--opened {
   background-color: #283645;
 }
 .page-header__logo-image {
   padding-left: 20px;
   padding-top: 22px;
   padding-bottom: 25px;
+
 }
 @media (min-width: @desktop-width) {
   .page-header {
@@ -15,3 +23,4 @@
     flex-direction: row;
   }
 }
+

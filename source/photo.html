@@ -8,36 +8,36 @@
   </head>
   <body>
     <header class="page-header">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="74" height="22" alt="Пинк">
+            <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="74" height="22" alt="Пинк">
         </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item site-list__item--active">
-                <a href="index.html">Главная</a>
-              </li>
-              <li class="site-list__item">
-                <a href="photo.html">Фотографии</a>
-              </li>
-              <li class="site-list__item">
-                <a href="competition.html">Конкурс</a>
-              </li>
-              <li class="site-list__item">
-                <a href="https://htmlacademy.ru/">HTML Academy</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+        <button class="main-nav__toggle" type="button"> <span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="photo.html">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a href="competition.html">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a href="https://htmlacademy.ru/">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <main class="page-main">
       <h1 class="page-main__title">Фотографии пользователей</h1>
       <h3 class="page-main__description">Взгляните на фотографии, которые выкладывают пользователей! Видите, как не хватает ваших?</h3>
       <section class="photo-galery">
         <ul class="photo-gallery__list">
           <li class="photo-gallery__item">
-            <img class="users-photo" src="img/panorama-mobile@1x.jpg" width="230" height="137" alt="Фото пользователя">
+            <img class="users-photo" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фото пользователя">
             <blockquote>
               <cite class="author-name">Анна
                 <time class="publicaton-time" datetime="13:00">
@@ -180,5 +180,19 @@
           </b>
         </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+      navMain.classList.remove('main-nav--nojs');
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>
