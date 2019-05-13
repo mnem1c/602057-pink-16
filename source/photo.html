@@ -11,7 +11,11 @@
     <header class="page-header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="74" height="22" alt="Пинк">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg" width="146" height="40" alt="Пинк">
+            <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="74" height="22" alt="Пинк">
+          </picture>
         </a>
         <button class="main-nav__toggle" type="button"> <span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
@@ -32,13 +36,17 @@
         </div>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="page-main page-main__photo">
       <h1 class="page-main__title">Фотографии <br> пользователей</h1>
       <h3 class="page-main__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h3>
       <section class="photo-galery">
         <ul class="photo-gallery__list">
           <li class="photo-gallery__item">
-            <img class="photo-gallery--users-photo" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фото пользователя">
+            <picture class="photo-gallery__item--wrapper photo-galery--photo-of-day">
+              <source media="(min-width:960px)" srcset="img/panorama-desktop@1x.jpg">
+              <source media="(min-width:660px)" srcset="img/panorama-tablet@1x.jpg">
+              <img class="photo-gallery--users-photo" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фото пользователя">
+            </picture>
             <blockquote class="photo-gallery--user-quote">
               <cite class="photo-gallery--author-name">Анна
                 <time class="photo-gallery--publicaton-time" datetime="13:00">
@@ -52,7 +60,11 @@
             </blockquote>
           </li>
           <li class="photo-gallery__item">
-            <img class="photo-gallery--users-photo" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя">
+            <picture class="photo-gallery__item--wrapper">
+              <source media="(min-width:960px)" srcset="img/photo-car-desktop@1x.jpg">
+              <source media="(min-width:660px)" srcset="img/photo-car-tablet@1x.jpg">
+              <img class="photo-gallery--users-photo" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя">
+            </picture>
             <blockquote class="photo-gallery--user-quote">
               <cite class="photo-gallery--author-name">Левон
                 <time class="photo-gallery--publicaton-time" datetime="13:00">
@@ -66,7 +78,11 @@
             </blockquote>
           </li>
           <li class="photo-gallery__item">
-            <img class="photo-gallery--users-photo" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя">
+            <picture class="photo-gallery__item--wrapper">
+              <source media="(min-width:960px)" srcset="img/photo-drumset-desktop@1x.jpg">
+              <source media="(min-width:660px)" srcset="img/photo-drumset-tablet@1x.jpg">
+              <img class="photo-gallery--users-photo" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя">
+            </picture>
             <blockquote class="photo-gallery--user-quote">
               <cite class="photo-gallery--author-name">Антон
                 <time class="photo-gallery--publicaton-time" datetime="13:00">
@@ -80,21 +96,29 @@
             </blockquote>
           </li>
           <li class="photo-gallery__item">
-            <img class="photo-gallery--users-photo" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя">
+            <picture class="photo-gallery__item--wrapper">
+              <source media="(min-width:960px)" srcset="img/photo-window-desktop@1x.jpg">
+              <source media="(min-width:660px)" srcset="img/photo-window-tablet@1x.jpg">
+              <img class="photo-gallery--users-photo" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя">
+            </picture>
             <blockquote class="photo-gallery--user-quote">
               <cite class="photo-gallery--author-name">Борис
                 <time class="photo-gallery--publicaton-time" datetime="13:00">
                   (20 часов назад)
                 </time>
                 <p class="photo-gallery--author-comment">
-                  Здесь могла быть цитата о высоком и вечном.
+                  Здесь могла быть ваша цитата о высоком и вечном.
                 </p>
                 <p class="photo-gallery--likes-count">Нравится: 215</p>
               </cite>
             </blockquote>
           </li>
           <li class="photo-gallery__item">
-            <img class="photo-gallery--users-photo" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя">
+            <picture class="photo-gallery__item--wrapper">
+              <source media="(min-width:960px)" srcset="img/photo-fair-desktop@1x.jpg">
+              <source media="(min-width:660px)" srcset="img/photo-fair-tablet@1x.jpg">
+              <img class="photo-gallery--users-photo" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя">
+            </picture>
             <blockquote class="photo-gallery--user-quote">
               <cite class="photo-gallery--author-name">Сергей
                 <time class="photo-gallery--publicaton-time" datetime="13:00">
@@ -108,7 +132,11 @@
             </blockquote>
           </li>
           <li class="photo-gallery__item">
-            <img class="photo-gallery--users-photo" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя">
+            <picture class="photo-gallery__item--wrapper">
+              <source media="(min-width:960px)" srcset="img/photo-pov-desktop@1x.jpg">
+              <source media="(min-width:660px)" srcset="img/photo-pov-tablet@1x.jpg">
+              <img class="photo-gallery--users-photo" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя">
+            </picture>
             <blockquote class="photo-gallery--user-quote">
               <cite class="photo-gallery--author-name">Максим
                 <time class="photo-gallery--publicaton-time" datetime="13:00">
@@ -122,19 +150,23 @@
             </blockquote>
           </li>
           <li class="photo-gallery__item">
+            <picture class="photo-gallery__item--wrapper">
+              <source media="(min-width:960px)" srcset="img/photo-wing-desktop@1x.jpg">
+              <source media="(min-width:660px)" srcset="img/photo-wing-tablet@1x.jpg">
               <img class="photo-gallery--users-photo" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя">
-              <blockquote class="photo-gallery--user-quote">
-                <cite class="photo-gallery--author-name">Надежда
-                  <time class="photo-gallery--publicaton-time" datetime="13:00">
-                    (45 часов назад)
-                  </time>
-                  <p class="photo-gallery--author-comment">
-                    Всем GM и взаимные лайки!
-                  </p>
-                  <p class="photo-gallery--likes-count">Нравится: 2560</p>
-                </cite>
-              </blockquote>
-            </li>
+            </picture>
+            <blockquote class="photo-gallery--user-quote">
+              <cite class="photo-gallery--author-name">Надежда
+                <time class="photo-gallery--publicaton-time" datetime="13:00">
+                  (45 часов назад)
+                </time>
+                <p class="photo-gallery--author-comment">
+                  Всем GM и взаимные лайки!
+                </p>
+                <p class="photo-gallery--likes-count">Нравится: 2560</p>
+              </cite>
+            </blockquote>
+          </li>
         </ul>
       </section>
     </main>
