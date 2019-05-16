@@ -1,0 +1,115 @@
+.efficiency {
+  display: none;
+  }
+@media (min-width: @tablet-width) {
+  .efficiency {
+    min-width: 660px;
+    display: flex;
+  }
+  .efficiency__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 660px;
+    padding: 0 20px;
+    padding-top: 97px;
+    margin: 0 auto;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 238px;
+      height: 276px;
+      top: 59px;
+      left: 20px;
+      background-image: url(../img/timer-tablet.png);
+    }
+  }
+  .efficiency__icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .efficiency__content {
+
+    width: 310px;
+    color: #283645;
+
+  }
+  .efficiency__title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 36px;
+    color: #000000;
+    width: 170px;
+    text-align: left;
+  }
+  .efficiency__description {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    text-align: left;
+    color: #283645;
+  }
+  .efficiency__link {
+    font-size: 14px;
+    color: #d22856;
+  }
+}
+@media (min-width: @desktop-width) {
+  .efficiency {
+    position: relative;
+    min-width: 960px;
+    padding-bottom: 97px;
+    background-color: #f2f2f2;
+    z-index: -3;
+  }
+  .efficiency__wrapper {
+    justify-content: center;
+    width: 960px;
+    padding: 0 10px;
+    padding-top: 120px;
+    padding-left: 75px;
+    margin: 0 auto;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 298px;
+      height: 345px;
+      top: 59px;
+      left: 53px;
+      background-size: cover;
+      background-image: url(../img/timer-desktop.png);
+    }
+  }
+  .efficiency__content {
+    width: 530px;padding-top: 33px;
+    padding-left: 259px;
+    padding-bottom: 15px;
+    color: #283645;
+  }
+  .efficiency__title {
+    margin: 0;
+    padding-bottom: 15px;
+    width: 300px;
+    line-height: 30px;
+    text-align: left;
+  }
+  .efficiency__description {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: left;
+    color: #283645;
+  }
+  .efficiency__link {
+    font-size: 18px;
+    line-height: 30px;
+    color: #d22856;
+  }
+}
