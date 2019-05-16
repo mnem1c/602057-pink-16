@@ -5,18 +5,24 @@
   .efficiency {
     min-width: 660px;
     display: flex;
-    justify-content: space-around;
   }
   .efficiency__wrapper {
+    position: relative;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-
+    justify-content: flex-end;
     width: 660px;
     padding: 0 20px;
     padding-top: 97px;
-    padding-left: 35px;
     margin: 0 auto;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 238px;
+      height: 276px;
+      top: 59px;
+      left: 20px;
+      background-image: url(../img/timer-tablet.png);
+    }
   }
   .efficiency__icon {
     position: relative;
@@ -24,28 +30,12 @@
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    width: 175px;
-    height: 175px;
-    border: 15px solid #d22856;
-    border-radius: 50%;
-    color: #d22856;
-    font-size: 96px;
-    font-weight: bold;
-    &::before {
-      position: absolute;
-      content: '';
-      width: 238px;
-      height: 276px;
-      top: -71px;
-      left: -32px;
-      background-image: url(../img/timer-svg.png);
-      z-index: -1;
-    }
   }
   .efficiency__content {
+
     width: 310px;
-    padding-left: 88px;
     color: #283645;
+
   }
   .efficiency__title {
     margin: 0;
@@ -78,43 +68,26 @@
     z-index: -3;
   }
   .efficiency__wrapper {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+    justify-content: center;
     width: 960px;
     padding: 0 10px;
     padding-top: 120px;
     padding-left: 75px;
     margin: 0 auto;
-  }
-  .efficiency__icon {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    width: 223px;
-    height: 223px;
-    border: 15px solid #d22856;
-    border-radius: 50%;
-    color: #d22856;
-    font-size: 120px;
-    line-height: 187px;
-    font-weight: bold;
     &::before {
       position: absolute;
       content: '';
       width: 298px;
       height: 345px;
-      top: -85px;
-      left: -37px;
-      background-image: url(../img/timer-svg.svg);
-      z-index: -1;
+      top: 59px;
+      left: 53px;
+      background-size: cover;
+      background-image: url(../img/timer-desktop.png);
     }
   }
   .efficiency__content {
-    width: 530px;
-    padding-left: 90px;
+    width: 530px;padding-top: 33px;
+    padding-left: 259px;
     padding-bottom: 15px;
     color: #283645;
   }

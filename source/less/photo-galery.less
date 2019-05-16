@@ -21,12 +21,13 @@
   align-items: center;
 }
 .photo-gallery--user-quote {
+
   width: 280px;
-  background-color: #f2f2f2;
   margin: 0;
   padding: 18px;
   box-sizing: border-box;
   font-style: normal;
+  background-color: #f2f2f2;
 }
 .photo-gallery__item--wrapper {
   margin: 0;
@@ -40,7 +41,25 @@
   max-width: 100%;
 }
 .photo-galery--photo-of-day {
+  position: relative;
   width: 100%;
+  &::before {
+    position: absolute;
+    content: 'Панорама дня';
+    width: 140px;
+    height: 36px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #d22856;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 .photo-gallery--author-name {
   font-style: normal;
@@ -79,21 +98,26 @@
 }
 @media (min-width: @tablet-width) {
   .photo-gallery__list {
-    width: 620px;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
   }
   .photo-gallery__item {
-    margin: 0;
+
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .photo-gallery__item:first-child {
     width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     padding-bottom: 50px;
   }
-
+  .photo-galery--photo-of-day {
+    &::before {
+      top: 57px;
+     }
+    }
   .photo-gallery--users-photo {
     max-width: 300px;
   }
@@ -104,10 +128,43 @@
     width: 300px;
   }
   .photo-gallery--user-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 300px;
     height: 155px;
+    padding-top: 25px;
+    padding-left: 27px;
+    padding-right: 84px;
+  }
+  .photo-gallery--user-quote .photo-gallery--author-comment-day {
+    width: 510px;
+  }
+  .photo-gallery--author-comment {
+    width: 232px;
+  }
+  .photo-gallery--likes-count {
+    display: flex;
+    padding: 0;
+    padding-bottom: 4px;
+    margin: 0;
+    margin-top: auto;
+    &::before {
+      top: 5px;
+      left: 228px;
+    }
   }
 
+  .photo-gallery--likes-count-day {
+    padding-top: 10px;
+    padding-left: 32px;
+    top: -83px;
+    left: 413px;
+    &::before {
+      top: 15px;
+      left: 138px;
+    }
+  }
   .photo-gallery__item:first-child .photo-gallery--user-quote {
     width: 620px;
     height: 121px;
@@ -115,6 +172,35 @@
   }
 }
 @media (min-width: @desktop-width) {
-
-
+  .photo-galery--photo-of-day {
+    &::before {
+    right: 130px;
+    top: 57px;
+    }
+  }
+  .photo-gallery__item {
+    padding-bottom: 52px;
+  }
+  .photo-gallery__item:first-child .photo-gallery--user-quote {
+    width: 940px;
+    height: 96px;
+    padding-top: 22px;
+    margin: 0 auto;
+  }
+  .photo-gallery--user-quote .photo-gallery--author-comment-day {
+    width: 865px;
+  }
+  .photo-gallery--author-comment {
+    width: 232px;
+  }
+  .photo-gallery--likes-count-day {
+    top: -58px;
+    left: 730px;
+  }
+  .photo-gallery--likes-count {
+    padding-bottom: 6px;
+}
+  .photo-gallery--user-quote {
+    padding-top: 22px;
+  }
 }
