@@ -1,0 +1,319 @@
+.price {
+  position: relative;
+  color: #283645;
+  background-color: #f2f2f2;
+  &::before {
+    content: '';
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: -11%;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #f2f2f2;
+    transform: skewY(-5.5deg);
+    z-index: -1;
+  }
+}
+.price__table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 100px;
+}
+.price__item {
+  background-color: #ffffff;
+}
+.price__item--title {
+  background-color: #283645;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+}
+.price__item--cost {
+  color: #f2f2f2;
+}
+.price__item--title-transparent {
+  display: none;
+}
+.price__item--title {
+  height: 94px;
+  line-height: 30px;
+}
+.price__item--title:last-child,
+.price__item--title:nth-child(2){
+  display: none;
+}
+
+.price__item--title-hit {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: none;
+  border-left:  2px solid #e5e5e5;
+  border-right: 2px solid #e5e5e5;
+  width: 276px;
+  font-weight: bold;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 74px;
+    height: 73px;
+    left: 0;
+    top: 0;
+    background-image: url(../img/bg-hit.svg);
+    background-position: center;
+    background-attachment: local;
+    background-repeat: no-repeat;
+  }
+  &::after {
+    position: absolute;
+    content: 'Хит';
+    width: 24px;
+    height: 25px;
+    left: 9px;
+    top: 15px;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    transform: rotate(-45deg);
+    }
+}
+.price__item--cost {
+  font-weight: normal;
+  font-size: 24px;
+}
+.price__item--option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 59px;
+  padding-right: 20px;
+  padding-left: 24px;
+  border-left:  2px solid #e5e5e5;
+  border-right: 2px solid #e5e5e5;
+  border-bottom: 2px solid #e5e5e5;
+  text-transform: uppercase;
+  color: #283645;
+  font-size: 14px;
+}
+.icon-yes--mobile {
+  fill: #3dc644;
+}
+.icon-no--mobile {
+  fill: #f25b26;
+}
+.slider-price__product-2 {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 6px;
+  height: 6px;
+  margin: -4px;
+  background-color: #ffffff;
+  border: solid 3px #283645;
+  border-radius: 50%;
+}
+.slider-price-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 43px;
+  z-index: 4;
+  width: 80px;
+  height: 18px;
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+ }
+.slider-price-controls .slider-price-controls__item {
+  position: relative;
+  display: inline-block;
+  width: 26px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider-price-controls .slider-price-controls__item::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  width: 6px;
+  height: 6px;
+  background: #bec2c7;
+  border-radius: 50%;
+}
+.slider-price-controls__item--2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 6px;
+  height: 6px;
+  margin: -4px;
+  background-color: #ffffff;
+  border: solid 3px #283645;
+  border-radius: 50%;
+}
+.price__item--option-yes,
+.price__item--option-no {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .price {
+    &::before {
+      top: -19%;
+      transform: skewY(-4.5deg);
+    }
+  }
+  .price__table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 620px;
+    padding: 0 20px;
+    margin: 0 auto;
+    padding-top: 9px;
+    padding-bottom: 70px;
+  }
+  .price__item {
+    display: flex;
+  }
+  .price__item--title-hit::after {
+    top: 8px;
+    left: 8px;
+  }
+  .price__item--title-transparent {
+    display: flex;
+    width: 152px;
+    background-color: #f2f2f2;
+    border-bottom: 2px solid #e5e5e5;
+  }
+  .price__item--title {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: bold;
+    height: 75px;
+  }
+  .price__item--cost {
+    font-size: 18px;
+  }
+  .price__item--title:last-child,
+  .price__item--title:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 152px;
+  }
+  .icon-yes--mobile {
+    display: none;
+  }
+  .icon-no--mobile {
+    display: none;
+  }
+  .slider-price-controls {
+    display: none;
+  }
+  .price__item--title-hit {
+    display: flex;
+    width: 150px;
+    &::before {
+      width: 61px;
+      height: 61px;
+      left: 0;
+      top: 0;
+      background-image: url(../img/bg-hit-tablet.svg);
+    }
+  }
+ .price__item--option {
+    display: flex;
+    height: 45px;
+    width: 135px;
+    padding-right: 0;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: none;
+    color: #283645;
+
+  }
+
+  .price__item--option-yes,
+  .price__item--option-no {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    border-right: 2px solid #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
+    fill: #3dc644;
+  }
+  .price__item--option-no {
+    fill: #f25b26;
+  }
+}
+@media (min-width: @desktop-width) {
+  .price__table {
+    padding-top: 42px;
+    padding-bottom: 100px;
+    width: 940px;
+  }
+  .price::before {
+    top: -17%;
+    transform: skewY(-3.5deg);
+}
+  .price__item--title-transparent {
+    padding-left: 24px;
+    width: 210px;
+  }
+  .price__item--title {
+    font-size: 18px;
+    height: 94px;
+  }
+  .price__item--cost {
+    font-size: 24px;
+  }
+  .price__item--title:last-child,
+  .price__item--title:nth-child(2) {
+    width: 235px;
+    height: 96px;
+  }
+  .price__item--option {
+    height: 59px;
+    width: 210px;
+    padding-left: 20px;
+    font-size: 18px;
+  }
+  .price__item--option-yes,
+  .price__item--option-no {
+    width: 235px;
+    height: 59px;
+  }
+  .price__item--title-hit {
+    width: 235px;
+    height: 96px;
+    &::before {
+      width: 74px;
+      height: 74px;
+      left: 0;
+      top: 0;
+      background-image: url(../img/bg-hit.svg);
+    }
+    &::after {
+      top: 15px;
+      left: 14px;
+    }
+  }
+}
