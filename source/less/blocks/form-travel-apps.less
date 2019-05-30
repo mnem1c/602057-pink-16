@@ -1,0 +1,94 @@
+.form-travel-apps {
+  padding-top: 40px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+}
+.form-travel-apps__legend {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #d22856;
+}
+.form-travel-apps__wrapper {
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
+  border: none;
+}
+.form-travel-apps__list {
+  padding: 0;
+  padding-top: 38px;
+  margin: 0;
+}
+.form-travel-apps__item {
+  position: relative;
+  padding-top: 1px;
+  padding-bottom: 51px;
+  padding-left: 51px;
+  color: #283645;
+  list-style: none;
+}
+.form-travel-apps__input {
+  opacity: 0;
+}
+.form-travel-apps__item label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  left: 0px;
+  top: -3px;
+  width: 33px;
+  height: 33px;
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+}
+.form-travel-apps__item input[type="radio"]:checked + label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  left: 0px;
+  top: -3px;
+  width: 33px;
+  height: 33px;
+  background-image: url("../img/icon-map-marker.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: @tablet-width) {
+  .form-travel-apps {
+    display: flex;
+    order: 1;
+    padding-top: 0;
+    background-color: #ffffff;
+  }
+  .form-travel-apps__wrapper {
+    width: 576px;
+    padding-bottom: 22px;
+    border: 2px solid #e5e5e5;
+  }
+  .form-travel-apps__item {
+    padding-top: 12px;
+    padding-bottom: 39px;
+    padding-left: 79px;
+  }
+  .form-travel-apps__item label::before {
+    top: 6px;
+    left: 39px;
+  }
+  .form-travel-apps__item input[type="radio"]:checked + label::before {
+    top: 6px;
+    left: 39px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .form-travel-apps {
+    width: 440px;
+    height: 308px;
+    margin: 0;
+    padding-left: 60px;
+  }
+}

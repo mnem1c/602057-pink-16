@@ -1,0 +1,112 @@
+.slider-list {
+  width: 280px;
+  padding: 0 20px;
+  padding-bottom: 80px;
+  margin: 0 auto;
+  list-style: none;
+  line-height: 30px;
+  color: #000000;
+  text-align: center;
+}
+.slider__item--user-name {
+  margin: 0;
+  padding-top: 39px;
+
+}
+.slider__item--about-user {
+  display: none;
+}
+.slider__item--user-comment {
+  font-size: 14px;
+  color: #283645;
+}
+@media(min-width: @tablet-width) {
+  .slider__item--about-user {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 30px;
+    color: #283645;
+  }
+  .slider-list {
+    width: 620px;
+    padding: 0 20px;
+    padding-bottom: 97px;
+
+  }
+  .slider__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider__item--user-name {
+    padding-top: 35px;
+    padding-bottom: 2px;
+    font-size: 20px;
+    order: 2;
+  }
+  .slider__item--user-comment {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+
+  }
+  .slider__item--about-user {
+    order: 3;
+    color: #283645;
+  }
+}
+@media(min-width: @desktop-width) {
+  .slider-controls {
+    display: none;
+  }
+  .slider__item--user-name {
+    font-size: 24px;
+  }
+  .slider__item--about-user {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .slider-list {
+    position: relative;
+    width: 940px;
+    padding: 0 10px;
+    padding-bottom: 97px;
+    margin: 0 auto;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 79px;
+      height: 63px;
+      top: -115px;
+      left: 46%;
+      background-image: url(../img/icon-quotes.svg);
+    }
+  }
+  .slider__item {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 41px;
+      left: 0;
+      top: 25px;
+      background-image: url(../img/icon-review-arrow-left.svg);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 41px;
+      right: 0;
+      top: 25px;
+      background-image: url(../img/icon-review-arrow-right.svg);
+    }
+  }
+  .slider__item--user-comment {
+    width: 685px;
+  }
+}

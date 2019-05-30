@@ -1,0 +1,17 @@
+.form {
+   margin: 0 auto;
+}
+@media (min-width: @tablet-width) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: @desktop-width) {
+  .form {
+    width: 940px;
+    padding: 0 10px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
